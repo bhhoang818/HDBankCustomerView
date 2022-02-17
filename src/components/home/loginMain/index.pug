@@ -1,0 +1,31 @@
+section.login-page 
+    .wide
+        .row 
+            .col-xl-7.col-lg-6.col-md-12
+                .wrap-left 
+                    .wrap-left_img 
+                        img(src="./images/login/image-content.png", alt="")
+                    .wrap-left_content 
+                        .desc 
+                            p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            .col-xl-5.col-lg-6.col-md-12
+                .wrap-right 
+                    form.wrap-form.d-flex.flex-column.align-items-center.justify-content-center(action="") 
+                        .form-title 
+                            p Chào mừng đến &nbsp;
+                                span 360° Customer View
+                        .form-label 
+                            p Nhập thông tin đăng nhập
+                        .form-group 
+                            input.form-control(type="text" placeholder='User name')
+                        .form-group 
+                            input.form-control(type="text" placeholder='Password')
+                            .hidden-password 
+                                img(src="./images/icons/eye_line.svg", alt="")
+                        .form-group 
+                            input#checkbox(type="checkbox", name="")
+                            label.label-checkbox(for="checkbox") Nhớ trạng thái đăng nhập
+                        button.btn.btn-login(type="submit")
+                            span Đăng nhập
+                    .loading
+                        img(src="./images/login/loading.gif", alt="")

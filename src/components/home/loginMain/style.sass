@@ -1,0 +1,144 @@
+.login-page
+    width: 100%
+    height: calc( 100vh - 61px )
+    background: #E5E5E5
+    display: flex
+    align-items: center
+    .wrap-left
+        &_img
+            margin-bottom: 40px
+        &_content
+            .desc
+                p
+                    font-size: 32px
+                    color: #454F5B
+    .wrap-right
+        max-width: 509px
+        width: 100%
+        padding: 40px
+        background: #FFFFFF
+        border: 1px solid #D3D8DE
+        box-sizing: border-box
+        box-shadow: 0px 14px 40px rgba(33, 43, 54, 0.1)
+        border-radius: 8px
+        .wrap-form
+            .form-title
+                padding-bottom: 1rem
+
+                p
+                    font-weight: bold
+                    font-size: 20px
+                    color: #464646
+                    span
+                        color: #BE1128
+            .form-label
+                padding-bottom: 1rem
+                p
+                    font-size: 1rem
+                    color: #454F5B
+            .form-group
+                position: relative
+                width: 100%
+                margin-bottom: 1rem
+                .form-control
+                    width: 100%
+                    background: #FFFFFF
+                    border: 1px solid #D3D8DE
+                    box-sizing: border-box
+                    border-radius: 4px
+                    padding: 6px 16px
+                .hidden-password
+                    position: absolute
+                    right: 16px
+                    top: 50%
+                    transform: translateY(-50%)
+                .label-checkbox
+                    font-size: 1rem
+                    color: $black
+                    position: relative
+                    padding-left: 24px
+                    cursor: pointer
+                    &::before
+                        position: absolute
+                        left: 0
+                        top: 50%
+                        transform: translateY(-50%)
+                        width: 18px
+                        height: 18px
+                        background: #FFFFFF
+                        border: 1px solid #D3D8DE
+                        box-sizing: border-box
+                        border-radius: 4px
+                        content: ''
+                        cursor: pointer
+
+                #checkbox
+                    display: none
+                    &:checked + label:before
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 2px
+                        left: 9px
+                        width: 6px
+                        height: 14px
+                        border: solid #0079bf
+                        border-width: 0 2px 2px 0
+                        transform: rotate(45deg)
+            .btn-login
+                width: 100%
+                padding: 12px 0
+                border-radius: 4px
+        .loading
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: #fff
+            z-index: 101
+            border-radius: 8px
+            display: none
+            align-items: center
+            justify-content: center
+            &.active
+                display: flex
+    @media screen and ( max-width: 1366.98px )
+        .wrap-right
+            .wrap-form
+                .form-title
+                    p
+                        font-size: 18px
+    @media screen and ( max-width: 1199.98px )
+        .wrap-left
+            &_content
+                .desc
+                    p
+                        font-size: 20px
+        .wrap-right
+            padding: 16px
+            .wrap-form
+                .form-title
+                    p
+                        font-size: 16px
+    @media screen and ( max-width: 1024.98px )
+        .wrap-left
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            margin-bottom: 40px
+        .wrap-right
+            max-width: 100%
+    @media screen and ( max-width: 575.98px )
+        height: calc( 100vh - 51px )
+        .wrap-left
+            margin-bottom: 16px
+            &_img
+                width: 128px
+                margin-bottom: 16px
+            &_content
+                .desc
+                    p
+                        font-size: 16px
+                        text-align: center
