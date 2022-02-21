@@ -1,6 +1,12 @@
+.loginPage
+    header
+        .wrap-header
+            .wrap-header-right
+                display: none
 .login-page
+    position: relative
     width: 100%
-    height: calc( 100vh - 61px )
+    height: 100vh
     background: #E5E5E5
     display: flex
     align-items: center
@@ -85,10 +91,7 @@
                         border: solid #0079bf
                         border-width: 0 2px 2px 0
                         transform: rotate(45deg)
-            .btn-login
-                width: 100%
-                padding: 12px 0
-                border-radius: 4px
+
         .loading
             position: absolute
             top: 0
@@ -131,7 +134,6 @@
         .wrap-right
             max-width: 100%
     @media screen and ( max-width: 575.98px )
-        height: calc( 100vh - 51px )
         .wrap-left
             margin-bottom: 16px
             &_img
@@ -142,3 +144,8 @@
                     p
                         font-size: 16px
                         text-align: center
+    .bg-footer
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%

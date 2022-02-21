@@ -1,0 +1,27 @@
+section.full-login
+    .login-bg 
+        img.desktop1920(src="./images/login/login-bg-hdbank.jpg", alt="")
+        img.desktop1366(src="./images/login/login-bg-hdbank-tablet.jpg", alt="")
+    form.login-form
+        .login-form-title.mb-5
+            a(href="") 
+                img(src="./images/login/logo.svg", alt="")
+        h1 Đăng nhập &nbsp;
+            span Title
+        .form-group
+            input.form-control.input(type='text' name='email')
+            span.focus-input
+            span.label-input Email
+        .form-group
+            input.form-control.input(type='password' name='password')
+            span.focus-input
+            span.label-input Mật khẩu
+            span.eyes 
+                img(src="./images/icons/eye_line.svg", alt="")
+        .checkbox-forget.d-flex.align-items-center.justify-content-between.mt-4.mb-4
+            .form-checkbox
+                input#checkbox(type="checkbox", name="")
+                label.label-checkbox(for="checkbox") Nhớ trạng thái đăng nhập
+            a.txt(href='#') Quên mật khẩu?
+        button.btn.btn-login(type="submit")
+            span Đăng nhập

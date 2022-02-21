@@ -1,0 +1,170 @@
+.bg-hdbank
+    header
+        display: none
+.full-login
+    width: 100vw
+    height: 100vh
+    display: flex
+
+    .login-bg
+        width: 65vw
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .desktop1366
+            @media screen and ( min-width: 1367px )
+                display: none
+        .desktop1920
+            @media screen and ( max-width: 1366.98px )
+                display: none
+    .login-form
+        width: 35vw
+        height: 100vh
+        padding: 30px
+        margin-left: auto
+        background: #FFF9E5
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .login-form-title
+            width: 292px
+            margin-bottom: 80px
+            a
+                +img-ratio(72/206)
+        h1
+            font-size: 32px
+            color: #464646
+            margin-bottom: 40px
+            span
+                color: #FFC20E
+        .form-group
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            align-items: flex-end
+            width: 100%
+            height: 60px
+            position: relative
+            border: 1px solid #e6e6e6
+            border-radius: 10px
+            margin-bottom: 16px
+            background: #fff
+            .form-control
+                display: block
+                width: 100%
+                height: 100%
+                background: transparent
+                font-size: 18px
+                color: #333
+                padding: 0 26px
+                border: 0
+                transition: all 0.4s
+                touch-action: manipulation
+            input.form-control:focus
+                height: 30px
+
+            input.form-control:focus + .focus-input
+                visibility: visible
+                opacity: 1
+                transform: scale(1)
+            input.form-control:focus + .focus-input + .label-input
+                top: 14px
+                font-size: 13px
+            .focus-input
+                position: absolute
+                display: block
+                width: calc(100% + 2px)
+                height: calc(100% + 2px)
+                top: -1px
+                left: -1px
+                pointer-events: none
+                border: 1px solid #6675df
+                border-radius: 10px
+                visibility: hidden
+                opacity: 0
+                transition: all 0.4s
+                transform: scaleX(1.1) scaleY(1.3)
+            .label-input
+                font-size: 18px
+                color: #999999
+                display: block
+                position: absolute
+                pointer-events: none
+                width: 100%
+                padding-left: 24px
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                transition: all 0.4s
+            .eyes
+                position: absolute
+                top: 50%
+                right: 16px
+                cursor: pointer
+                transform: translateY(-50%)
+        .checkbox-forget
+            width: 100%
+            .form-checkbox
+                #checkbox
+                    display: none
+
+                .label-checkbox
+                    font-size: 13px
+                    color: #333333
+                    display: block
+                    position: relative
+                    padding-left: 26px
+                    cursor: pointer
+
+                    &::before
+                        content: "\e5ca"
+                        font-family: Material Icons
+                        font-size: 13px
+                        color: transparent
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        position: absolute
+                        width: 18px
+                        height: 18px
+                        border-radius: 2px
+                        background: #fff
+                        border: 1px solid #6675df
+                        left: 0
+                        top: 50%
+                        transform: translateY(-50%)
+
+                #checkbox:checked + .label-checkbox::before
+                    color: #6675df
+            .txt
+                font-size: 13px
+                line-height: 1.4
+                color: #555555
+        .btn-login
+            width: 50%
+            border-radius: 10px
+            &::before
+                border-radius: 10px
+    @media screen and ( max-width: 1366.98px )
+        .login-bg
+            width: 60vw
+        .login-form
+            width: 40vw
+    @media screen and ( max-width: 1024.98px )
+        .login-bg
+            display: none
+        .login-form
+            width: 100vw
+            .login-form-title
+                margin-bottom: 32px
+            h1
+                margin-bottom: 32px
+
+.has-val
+    height: 30px !important
+.has-val + .focus-input + .label-input
+    top: 14px !important
+    font-size: 13px !important
